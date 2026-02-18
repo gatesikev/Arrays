@@ -178,12 +178,21 @@ console.log(`Prices greater than $15: ${countAbove15}`);
 const users = [{name: "Zoe", age: 30}, {name: "Adam", age: 25}, {name: "Charlie", age: 30}];
 
 //a
-const sortedByAge = users.sort((a, b) => a.age - b.age);
+const sortedByAge = [...users].sort((a, b) => a.age - b.age);
 console.log(sortedByAge);
-const sortedByAgeAndName = users.sort((a, b) => {
+const sortedByAgeAndName = [...users].sort((a, b) => {
     if (a.age !== b.age) {
         return a.age - b.age;
     }
     return a.name.localeCompare(b.name);
 });
 console.log(sortedByAgeAndName);
+
+
+//Exercise 14: Mapping and Filtering Objects
+
+const userNames = users.map(user => user.name);
+console.log(userNames);
+
+const usersOlderThan28 = users.filter(user => user.age > 28);
+console.log(usersOlderThan28);
