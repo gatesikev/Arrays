@@ -213,3 +213,24 @@ console.log(gameBoard);
 
 //c
 console.log(gameBoard[0][2]);
+
+//Exercise 16: Looping Through a Matrix
+
+let gamesBoard = [
+  [0, 0, 0],
+  [0, 1, 0],
+  [0, 0, 0]
+];
+
+let sum = 0;
+
+// Nested loops to iterate through the matrix
+for (let i = 0; i < gamesBoard.length; i++) {
+  for (let j = 0; j < gamesBoard[i].length; j++) {
+    console.log(gamesBoard[i][j]); // Print each value
+    sum += gamesBoard[i][j];       // Add to sum
+  }
+}
+
+// Print total sum
+console.log("Sum of all elements:", sum);
