@@ -127,3 +127,22 @@ console.log(sentence);
 const middleThree = sentenceParts.slice(1, 4);
 console.log(middleThree);
 
+// Exercise 9: Flattening Arrays(flats)
+const nestedList = [1, [2, 3], [4, [5, 6]], 7];
+//a
+const flattenedOnce = nestedList.flat();
+console.log(flattenedOnce);
+const fullyFlattened = nestedList.flat(Infinity);
+console.log(fullyFlattened);
+
+//SECTION D: Functional Programming (Higher-Order METHODS)
+//Exercise 10: Mapping Data(map)
+const pricesUSD = [10.50, 20.00, 5.25];
+//a
+const exchangeRate = 1.3; 
+const pricesEUR = pricesUSD.map(price => price * exchangeRate);
+console.log(pricesEUR);
+
+//b
+const priceStrings = pricesUSD.map(price => `Item price: $${price.toFixed(2)}`);
+console.log(priceStrings);
